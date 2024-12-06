@@ -9,7 +9,15 @@ document.addEventListener('DOMContentLoaded', function(){
     // Get frame width
     const frameWidth = window.innerWidth;
     const frameHeight = window.innerHeight;
-    // change content if frame <= 1024px
+
+    // console.log(window.outerWidth);
+    // console.log(window.innerWidth);
+
+    // Laptop
+    if(Number(frameWidth) === 1536 && Number(frameHeight) === 701.60){
+        console.log("here");
+    }
+
     if(Number(frameWidth) <= 1024){
 
         document.querySelector('.exclamation').remove();
