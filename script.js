@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".intro").textContent = "Harshit Raj Sinha";
         if (frameWidth < frameHeight) {
           document.querySelector(".intro").style.fontSize =
-            String(newIntroFont) + "rem";
+            String(newIntroFont / 1.2) + "rem";
           document.querySelector(".skill-desc").style.fontSize =
             String(newIntroFont / 2) + "rem";
           document.querySelector(".prev-experience").style.fontSize =
