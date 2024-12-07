@@ -37,9 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
           document.querySelector(".intro").style.fontSize =
             String(newIntroFont / 1.2) + "rem";
           document.querySelector(".skill-desc").style.fontSize =
-            String(newIntroFont / 2) + "rem";
+            String(newIntroFont / 1.8) + "rem";
           document.querySelector(".prev-experience").style.fontSize =
-            String(newIntroFont / 3) + "rem";
+            String(newIntroFont / 2.5) + "rem";
           if (frameWidth <= 540) {
             document.querySelector(".my-photo").style.width =
               String(newPhotoWidth + 60) + "px";

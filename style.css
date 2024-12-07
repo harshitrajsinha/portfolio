@@ -212,6 +212,10 @@ button.project-button:hover {
     justify-content: center;
   }
 
+  .info .desc .seperator {
+    margin-bottom: 2rem;
+  }
+
   /* .my-photo img{
     margin-top: 35rem;
   } */
