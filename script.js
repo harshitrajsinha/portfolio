@@ -40,8 +40,13 @@ document.addEventListener("DOMContentLoaded", function () {
             String(newIntroFont / 2) + "rem";
           document.querySelector(".prev-experience").style.fontSize =
             String(newIntroFont / 3) + "rem";
-          document.querySelector(".my-photo").style.width =
-            String(newPhotoWidth) + "px";
+          if (frameWidth <= 540) {
+            document.querySelector(".my-photo").style.width =
+              String(newPhotoWidth + 60) + "px";
+          } else {
+            document.querySelector(".my-photo").style.width =
+              String(newPhotoWidth + 0) + "px";
+          }
           document.querySelector(".my-photo").style.height =
             String(newPhotoHeight) + "px";
         } else {
