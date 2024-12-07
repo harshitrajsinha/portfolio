@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const newPhotoHeight =
         (frameHeight / fixedFrameHeight) * fixedPhotoHeight;
       const newPhotoWidth = (frameWidth / fixedFrameWidth) * fixedPhotoWidth;
-      const newIntroFont = (frameWidth / fixedFrameWidth) * fixedIntroFont;
+      const newIntroFont = (frameWidth / fixedFrameWidth) * fixedIntroFont + 1;
       if (
         frameWidth === Math.floor(entry.contentRect.width) &&
         frameWidth <= 1024
@@ -35,7 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".intro").textContent = "Harshit Raj Sinha";
         if (frameWidth < frameHeight) {
           document.querySelector(".intro").style.fontSize =
-            String(newIntroFont + 1) + "rem";
+            String(newIntroFont) + "rem";
+          document.querySelector(".skill-desc").style.fontSize =
+            String(newIntroFont / 2) + "rem";
+          document.querySelector(".prev-experience").style.fontSize =
+            String(newIntroFont / 3) + "rem";
           document.querySelector(".my-photo").style.width =
             String(newPhotoWidth) + "px";
           document.querySelector(".my-photo").style.height =
@@ -43,6 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           document.querySelector(".intro").style.fontSize =
             String(newIntroFont) + "rem";
+          document.querySelector(".skill-desc").style.fontSize =
+            String(newIntroFont / 2) + "rem";
+          document.querySelector(".prev-experience").style.fontSize =
+            String(newIntroFont / 3) + "rem";
           document.querySelector(".my-photo").style.width = prevPhotoWidth;
           document.querySelector(".my-photo").style.height = prevPhotoHeight;
         }
