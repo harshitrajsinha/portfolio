@@ -1,12 +1,3 @@
-:root {
-  ---fixedPhotoHeight: 518.4px;
-  ---fixedPhotoWidth: 407.35px;
-
-  --fixedFrameWidth: 1024px;
-  --fixedFrameHeight: 1366px;
-  --fixedIntroFont: 5rem;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -198,9 +189,6 @@ button#project-button:hover {
     text-align: center;
   }
 
-  #seperator {
-    margin-bottom: 2rem;
-  }
   #exclamation {
     display: none;
   }
@@ -250,7 +238,7 @@ button#project-button:hover {
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 300px) {
   body {
     white-space: nowrap;
   }
