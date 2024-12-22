@@ -1,7 +1,17 @@
+:root {
+  ---fixedPhotoHeight: 518.4px;
+  ---fixedPhotoWidth: 407.35px;
+
+  --fixedFrameWidth: 1024px;
+  --fixedFrameHeight: 1366px;
+  --fixedIntroFont: 5rem;
+}
+
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
+  list-style: none;
   box-sizing: border-box;
   color: white;
   font-family: monospace;
@@ -9,14 +19,17 @@
 
 body {
   background-color: #191627;
+  width: 65vw;
+  margin: 2rem auto;
 }
 
-.nav-container {
+header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 3rem;
 }
 
-.nav-logo {
+header #logo {
   font-family: "Montserrat";
   font-weight: bold;
   font-size: 1.25rem;
@@ -25,29 +38,40 @@ body {
   letter-spacing: 0.15rem;
 }
 
-.header-socials {
+header ul#header-socials {
   display: flex;
+  justify-content: space-between;
   gap: 3rem;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5rem;
 }
 
 .info {
   padding-top: 2rem;
-  width: 90%;
+  width: 100%;
 }
 
-.info .desc .exclamation {
+#exclamation {
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: bold;
 }
 
-.info .desc .intro {
+.intro {
   font-size: 5rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.info .desc .skill-desc {
+#intro-ss {
+  display: none;
+}
+
+#skill-desc {
   font-size: 2.25rem;
   background: linear-gradient(62deg, #ea5fb3, #bd49da, #913ef1, #f87777);
   -webkit-background-clip: text;
@@ -57,12 +81,12 @@ body {
   background-size: 200% 200%;
 }
 
-.info .desc .seperator {
+#seperator {
   font-size: 1.75rem;
   margin-bottom: 1rem;
 }
 
-.info .desc .prev-experience {
+#prev-experience {
   font-size: 1.75rem;
   margin-bottom: 3rem;
 }
@@ -73,7 +97,7 @@ body {
   margin-bottom: 2rem;
 }
 
-.project-button {
+#project-button {
   background: linear-gradient(to right, #647dee, #7f53ac, #9a3ad5, #1fd1f9);
   width: 15rem;
   height: 4rem;
@@ -81,15 +105,6 @@ body {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-}
-
-.my-photo {
-  height: 100%;
-}
-
-.my-photo img {
-  width: 100%;
-  height: 100%;
 }
 
 /* Animations/transforms */
@@ -117,42 +132,18 @@ img:hover {
   }
 }
 
-button.project-button:hover {
+button#project-button:hover {
   animation: glow 1.5s infinite alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  button.project-button {
-    animation: none;
-  }
-}
-
-/* For laptop and wider screens  */
-
-@media (min-width: 1025px) {
-  .main {
-    margin-top: 2rem;
-  }
-
-  header {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 80rem;
-  }
-
-  section {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 80rem;
-    margin-top: 10rem;
-    display: flex;
-    /* height: 32rem; */
-  }
 }
 
 /* Screens between laptop and tablet */
 
 @media (min-width: 1025px) and (max-width: 1535px) {
+  body {
+    width: clamp(65vw, calc(100vw - 8rem), 90vw);
+    max-width: 90vw; /* Ensures it doesn't exceed 90vw */
+    min-width: 65vw; /* Ensures it doesn't shrink below 65vw */
+  }
   header {
     margin-left: auto;
     margin-right: auto;
@@ -163,38 +154,33 @@ button.project-button:hover {
     margin-left: auto;
     margin-right: auto;
     max-width: 80%;
-    margin-top: 10rem;
     display: flex;
   }
 }
 
-@media (min-width: 540px) and (max-width: 1024px) {
-  .header-socials .resume {
+/* Screens equal to tablet and smaller */
+@media (max-width: 1024px) {
+  body {
+    width: 90vw;
+    margin-top: 5%;
+  }
+  header nav#nav-container {
+    width: 100%;
+  }
+  header #logo {
+    display: none;
+  }
+  #header-socials {
+    justify-content: space-between;
+    width: 100%;
+  }
+  #header-socials #resume {
     width: 110%;
     height: 100%;
   }
-  .header-socials .gmail {
+  #header-socials #gmail {
     width: 100%;
     height: 80%;
-  }
-}
-
-/* Screens equal to tablet and smaller */
-
-@media (max-width: 1024px) {
-  .main {
-    margin-top: 5%;
-  }
-  .nav-container {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .nav-logo {
-    display: none;
-  }
-  .header-socials {
-    justify-content: space-between;
-    width: 100%;
   }
 
   section {
@@ -205,28 +191,56 @@ button.project-button:hover {
     margin-right: 5%;
     margin-top: 3rem;
     margin-bottom: 3rem;
+    padding-top: 0;
   }
 
   .info {
     text-align: center;
   }
 
+  #seperator {
+    margin-bottom: 2rem;
+  }
+  #exclamation {
+    display: none;
+  }
+
+  #intro-ws {
+    display: none;
+  }
+  #intro-ss {
+    display: block;
+    font-size: 7.5vw;
+    margin: auto calc(-50vw + 50%);
+  }
+
+  #skill-desc {
+    font-size: 4.5vw;
+  }
+
+  #seperator {
+    font-size: 1.75rem;
+  }
+
+  #prev-experience {
+    font-size: 3vw;
+    margin-bottom: 3rem;
+  }
+
   .body-socials {
     justify-content: center;
   }
 
-  .info .desc .seperator {
-    margin-bottom: 2rem;
+  #project-button {
+    width: 15rem;
+    height: 4rem;
+    border-radius: 5rem;
+    font-size: 1.5rem;
   }
-
-  /* .my-photo img{
-    margin-top: 35rem;
-  } */
 }
 
-/*
-
-w - 407.350 [1024]
-h - 518.400 [1366]
-
-*/
+@media (max-width: 370px) {
+  body {
+    white-space: nowrap;
+  }
+}

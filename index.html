@@ -8,44 +8,52 @@
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
     />
+    <!-- <script type="text/javascript" src="./script.js" defer></script> -->
     <title>Raj Sinha</title>
   </head>
   <body>
-    <div class="main">
+    <main>
       <header>
-        <nav class="nav-container">
-          <a href="/" class="nav-logo">Harshit Raj Sinha</a>
-          <div class="header-socials">
-            <a href="./public/resume.pdf" title="resume" target="_blank"
-              ><img
-                class="resume"
-                src="./public/logo/cv-crop.png"
-                alt="cv"
-                width="40"
-                height="40"
-            /></a>
-            <a
-              href="mailto:raj.harshitsinha08@gmail.com"
-              title="raj.harshitsinha08@gmail.com"
-              target="_blank"
-              ><img
-                class="gmail"
-                src="./public/logo/gmail-container.png"
-                alt="gmail"
-                width="40"
-                height="32"
-            /></a>
-          </div>
+        <a href="/" id="logo">Harshit Raj Sinha</a>
+        <nav id="nav-container">
+          <ul id="header-socials">
+            <li>
+              <a href="./public/resume.pdf" title="resume" target="_blank"
+                ><img
+                  id="resume"
+                  src="./public/logo/cv-crop.png"
+                  alt="cv"
+                  width="40"
+                  height="40"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="mailto:raj.harshitsinha08@gmail.com"
+                title="raj.harshitsinha08@gmail.com"
+                target="_blank"
+                ><img
+                  id="gmail"
+                  src="./public/logo/gmail-container.png"
+                  alt="gmail"
+                  width="40"
+                  height="32"
+              /></a>
+            </li>
+          </ul>
         </nav>
       </header>
       <section>
         <div class="info">
           <div class="desc">
-            <p class="exclamation">Hey!</p>
-            <p class="intro">I'm Harshit</p>
-            <p class="skill-desc">Full-stack developer</p>
-            <p class="seperator">_____</p>
-            <p class="prev-experience">
+            <p id="exclamation">Hey!</p>
+            <div class="intro">
+              <p id="intro-ws">I'm Harshit</p>
+              <p id="intro-ss">Harshit Raj Sinha</p>
+            </div>
+            <p id="skill-desc">Software Engineer</p>
+            <p id="seperator">_____</p>
+            <p id="prev-experience">
               previously @
               <a
                 href="https://in.linkedin.com/company/namaste-credit"
@@ -89,13 +97,12 @@
                 height="35"
             /></a>
           </div>
-          <button class="project-button">Check Projects</button>
+          <button id="project-button">Check Projects</button>
         </div>
         <div id="my-photo" class="my-photo">
           <img src="./public/photo.png" alt="photo" width="300" height="400" />
         </div>
       </section>
-    </div>
-    <script type="text/javascript" src="./script.js"></script>
+    </main>
   </body>
 </html>
