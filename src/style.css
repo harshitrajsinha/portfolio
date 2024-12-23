@@ -35,6 +35,20 @@ header ul#header-socials {
   gap: 3rem;
 }
 
+#resume {
+  width: 2.6vw;
+  height: 6vh;
+  min-height: 42px;
+  min-width: 40px;
+}
+
+#gmail {
+  width: 2.5vw;
+  height: 5vh;
+  min-height: 35px;
+  min-width: 35px;
+}
+
 section {
   display: flex;
   justify-content: space-between;
@@ -175,13 +189,19 @@ button#project-button:hover {
     justify-content: space-between;
     width: 100%;
   }
-  #header-socials #resume {
-    width: 110%;
-    height: 100%;
+
+  #resume {
+    width: 6.6vw;
+    height: 5.5vh;
+    min-height: 42px;
+    min-width: 40px;
   }
-  #header-socials #gmail {
-    width: 100%;
-    height: 80%;
+
+  #gmail {
+    width: 5.5vw;
+    height: 4vh;
+    min-height: 35px;
+    min-width: 35px;
   }
 
   section {
