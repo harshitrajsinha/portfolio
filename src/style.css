@@ -98,6 +98,11 @@ section {
   cursor: pointer;
 }
 
+.my-photo img {
+  width: 100%;
+  height: auto;
+}
+
 /* Animations/transforms */
 
 img {
@@ -146,6 +151,11 @@ button#project-button:hover {
     margin-right: auto;
     max-width: 80%;
     display: flex;
+  }
+
+  .my-photo img {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -203,7 +213,7 @@ button#project-button:hover {
   }
 
   #skill-desc {
-    font-size: 4.5vw;
+    font-size: 4vw;
   }
 
   #seperator {
@@ -225,6 +235,17 @@ button#project-button:hover {
     border-radius: 5rem;
     font-size: 1.5rem;
   }
+
+  .my-photo {
+    width: 40vw;
+    max-width: 317px;
+    max-height: 402px;
+  }
+
+  .my-photo img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 540px) {
@@ -235,6 +256,17 @@ button#project-button:hover {
   #prev-experience {
     font-size: 4.5vw;
     margin-bottom: 3rem;
+  }
+
+  .my-photo {
+    width: 50vw;
+    max-width: 317px;
+    max-height: 402px;
+  }
+
+  .my-photo img {
+    width: 100%;
+    height: auto;
   }
 }
 
