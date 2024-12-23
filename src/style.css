@@ -78,7 +78,7 @@ section {
 }
 
 #prev-experience {
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   margin-bottom: 3rem;
 }
 
@@ -229,11 +229,11 @@ button#project-button:hover {
 
 @media (max-width: 540px) {
   #skill-desc {
-    font-size: 6vw;
+    font-size: 5.5vw;
   }
 
   #prev-experience {
-    font-size: 5vw;
+    font-size: 4.5vw;
     margin-bottom: 3rem;
   }
 }
