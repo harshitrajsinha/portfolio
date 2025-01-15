@@ -222,6 +222,20 @@ h1 {
 }
 
 @media screen and (max-width: 1024px) {
+  #resume {
+    width: 6.6vw;
+    height: 6vh;
+    min-height: 42px;
+    min-width: 40px;
+  }
+
+  #gmail {
+    width: 6.5vw;
+    height: 5vh;
+    min-height: 35px;
+    min-width: 35px;
+  }
+
   #logo {
     display: none;
   }
