@@ -1,3 +1,7 @@
+:root {
+  --primary-page-color: #191627; /* Blue */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,15 +13,30 @@
 }
 
 body {
-  background-color: #191627;
+  background-color: var(--primary-page-color);
   width: 65vw;
   margin: 2rem auto;
 }
 
-header {
+img {
+  border-radius: 8px;
+  transition: transform 0.25s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.25);
+}
+
+main header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 3rem;
+}
+
+main section {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5rem;
 }
 
 header #logo {
@@ -29,54 +48,52 @@ header #logo {
   letter-spacing: 0.15rem;
 }
 
-header ul#header-socials {
+header #nav-container ul#header-socials {
   display: flex;
   justify-content: space-between;
   gap: 3rem;
 }
 
-#resume {
+header #nav-container #resume {
   width: 2.6vw;
   height: 6vh;
   min-height: 42px;
   min-width: 40px;
 }
 
-#gmail {
+header #nav-container #home-button {
+  display: none;
+}
+
+header #nav-container #gmail {
   width: 2.5vw;
   height: 5vh;
   min-height: 35px;
   min-width: 35px;
 }
 
-section {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 5rem;
-}
-
-.info {
+section #info {
   padding-top: 2rem;
   width: 100%;
 }
 
-#exclamation {
+section #info #desc #exclamation {
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: bold;
 }
 
-.intro {
+section #desc .intro {
   font-size: 5rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-#intro-ss {
+section #desc #intro-ss {
   display: none;
 }
 
-#skill-desc {
+section #desc #skill-desc {
   font-size: 2.25rem;
   background: linear-gradient(62deg, #ea5fb3, #bd49da, #913ef1, #f87777);
   -webkit-background-clip: text;
@@ -86,23 +103,28 @@ section {
   background-size: 200% 200%;
 }
 
-#seperator {
+section #desc #seperator {
   font-size: 1.75rem;
   margin-bottom: 1rem;
 }
 
-#prev-experience {
+section #desc #prev-experience {
   font-size: 1.6rem;
   margin-bottom: 3rem;
 }
 
-.body-socials {
+section #info #body-socials {
   display: flex;
   gap: 4rem;
   margin-bottom: 2rem;
 }
 
-#project-button {
+section #body-socials img.social-links {
+  height: 3rem;
+  width: 3rem;
+}
+
+section #info #project-button {
   background: linear-gradient(to right, #647dee, #7f53ac, #9a3ad5, #1fd1f9);
   width: 15rem;
   height: 4rem;
@@ -110,26 +132,6 @@ section {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-}
-
-.my-photo img {
-  width: 100%;
-  height: auto;
-}
-
-/* Animations/transforms */
-
-img {
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out;
-}
-
-img:hover {
-  transform: scale(1.15);
-}
-
-.my-photo img:hover {
-  transform: scale(1.05);
 }
 
 @keyframes glow {
@@ -142,38 +144,69 @@ img:hover {
   }
 }
 
-button#project-button:hover {
+section #info button#project-button:hover {
   animation: glow 1.5s infinite alternate;
+}
+
+section .my-photo img {
+  width: 100%;
+  height: auto;
+}
+
+section .my-photo img:hover {
+  transform: scale(1.05);
 }
 
 /* Screens between laptop and tablet */
 
-@media (min-width: 1025px) and (max-width: 1535px) {
+@media screen and (min-width: 1025px) and (max-width: 1535px) {
   body {
     width: clamp(65vw, calc(100vw - 8rem), 90vw);
     max-width: 90vw; /* Ensures it doesn't exceed 90vw */
     min-width: 65vw; /* Ensures it doesn't shrink below 65vw */
   }
-  header {
+  main header {
     margin-left: auto;
     margin-right: auto;
     max-width: 80%;
   }
 
-  section {
+  header #logo {
+    font-size: 2vw;
+  }
+
+  header #nav-container ul#header-socials #resume {
+    width: 4vw;
+    height: 5.5vh;
+  }
+
+  header ul#header-socials #gmail {
+    width: 3.5vw;
+    height: 3.5vh;
+  }
+
+  main section {
     margin-left: auto;
     margin-right: auto;
     max-width: 80%;
     display: flex;
   }
 
-  .my-photo img {
+  section #info #desc #skill-desc {
+    font-size: 2.5vw;
+  }
+
+  section #desc #prev-experience {
+    font-size: 1.8vw;
+  }
+
+  section .my-photo img {
     width: 100%;
     height: auto;
   }
 }
 
-/* Screens equal to tablet and smaller */
+/* Screens between tablet and mobile */
 @media (max-width: 1024px) {
   body {
     width: 90vw;
@@ -185,20 +218,33 @@ button#project-button:hover {
   header #logo {
     display: none;
   }
-  #header-socials {
-    justify-content: space-between;
+  header #nav-container #header-socials {
     width: 100%;
+    align-items: center;
   }
 
-  #resume {
-    width: 6.6vw;
+  header #nav-container #home-button {
+    display: block;
+    background-color: var(--primary-page-color);
+    border: none;
+  }
+
+  header #home-button img {
+    width: 5vw;
+    height: 4.5vh;
+    min-height: 42px;
+    min-width: 40px;
+  }
+
+  header #nav-container #resume {
+    width: 5.8vw;
     height: 5.5vh;
     min-height: 42px;
     min-width: 40px;
   }
 
-  #gmail {
-    width: 5.5vw;
+  header #nav-container #gmail {
+    width: 4.8vw;
     height: 4vh;
     min-height: 35px;
     min-width: 35px;
@@ -215,82 +261,121 @@ button#project-button:hover {
     padding-top: 0;
   }
 
-  .info {
+  section #info {
     text-align: center;
   }
 
-  #exclamation {
+  section #desc #exclamation {
     display: none;
   }
 
-  #intro-ws {
+  section #desc #intro-ws {
     display: none;
   }
-  #intro-ss {
+  section #desc #intro-ss {
     display: block;
     font-size: 7.5vw;
     margin: auto calc(-50vw + 50%);
   }
 
-  #skill-desc {
+  section #desc #skill-desc {
     font-size: 4vw;
   }
 
-  #seperator {
+  section #desc #seperator {
     font-size: 1.75rem;
   }
 
-  #prev-experience {
+  section #desc #prev-experience {
     font-size: 3vw;
     margin-bottom: 3rem;
   }
 
-  .body-socials {
+  section #info #body-socials {
     justify-content: center;
   }
 
-  #project-button {
-    width: 15rem;
-    height: 4rem;
-    border-radius: 5rem;
-    font-size: 1.5rem;
+  section #body-socials img.social-links {
+    height: 4vh;
+    width: 4.5vw;
   }
 
-  .my-photo {
+  section #info #project-button {
+    width: 22vw;
+    height: 7vw;
+    font-size: 2.2vw;
+    border-radius: 5rem;
+  }
+
+  section .my-photo {
     width: 40vw;
     max-width: 317px;
     max-height: 402px;
   }
 
-  .my-photo img {
+  section .my-photo img {
     width: 100%;
     height: auto;
   }
 }
 
-@media (max-width: 540px) {
-  #skill-desc {
+/* Screens between tablet and mobile */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  section #body-socials img.social-links {
+    height: 10vh;
+    width: 4.5vw;
+  }
+}
+
+/* Screens equal to mobile */
+@media screen and (max-width: 540px) {
+  header #nav-container #gmail {
+    width: 3.8vw;
+    height: 3vh;
+    min-height: 35px;
+    min-width: 35px;
+  }
+
+  main section {
+    padding-top: 2vw;
+  }
+  section #desc #skill-desc {
     font-size: 5.5vw;
   }
 
-  #prev-experience {
+  section #desc #prev-experience {
     font-size: 4.5vw;
     margin-bottom: 3rem;
   }
 
-  .my-photo {
+  section #body-socials img.social-links {
+    height: 4vh;
+    width: 6.5vw;
+  }
+
+  section #info #body-socials {
+    gap: 10vw;
+  }
+
+  section #info #project-button {
+    width: 29vw;
+    height: 10vw;
+    font-size: 3vw;
+  }
+
+  section .my-photo {
     width: 50vw;
     max-width: 317px;
     max-height: 402px;
   }
 
-  .my-photo img {
+  section .my-photo img {
     width: 100%;
     height: auto;
   }
 }
 
-@media (max-width: 300px) {
+@media screen and (max-width: 300px) {
   body {
     white-space: nowrap;
   }

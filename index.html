@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/style.css" />
     <!-- Links for title icon -->
     <link
       rel="apple-touch-icon"
@@ -23,23 +22,31 @@
       href="./public/favicon-16x16.png"
     />
     <link rel="manifest" href="./public/site.webmanifest" />
+    <!-- Link for Google Font -->
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
     />
-    <script type="text/javascript" src="./src/script.js"></script>
+    <link rel="stylesheet" href="./src/style.css" />
+    <script type="text/javascript" src="./src/script.js" defer></script>
     <title>Raj Sinha</title>
   </head>
   <body>
     <main>
       <header>
-        <a href="/" id="logo">Harshit Raj Sinha</a>
+        <a href="./" id="logo">Harshit Raj Sinha</a>
         <nav id="nav-container">
           <ul id="header-socials">
             <li>
               <a href="./public/resume.pdf" title="resume" target="_blank"
-                ><img id="resume" src="./public/logo/cv-crop.png" alt="cv"
-              /></a>
+                ><img id="resume" src="./public/logo/cv-crop.png" alt="cv" />
+              </a>
+            </li>
+            <li>
+              <a href="./" title="Home"
+                ><button id="home-button">
+                  <img src="./public/logo/home.png" alt="home" /></button
+              ></a>
             </li>
             <li>
               <a
@@ -56,9 +63,8 @@
         </nav>
       </header>
       <section>
-        <div class="info">
-          <div class="desc">
-            <div id="test"></div>
+        <div id="info">
+          <div id="desc">
             <p id="exclamation">Hey!</p>
             <div class="intro">
               <p id="intro-ws">I'm Harshit</p>
@@ -78,41 +84,38 @@
               >
             </p>
           </div>
-          <div class="body-socials">
+          <div id="body-socials">
             <a
               href="https://github.com/harshitrajsinha"
               title="github@harshitrajsinha"
               target="_blank"
               ><img
+                class="social-links"
                 src="./public/logo/github-icon.png"
                 alt="github"
-                width="35"
-                height="35"
             /></a>
             <a
               href="https://www.linkedin.com/in/rajsinha08"
               title="linkedin@rajsinha08"
               target="_blank"
               ><img
+                class="social-links"
                 src="./public/logo/linkedin-icon.png"
                 alt="linkedin"
-                width="35"
-                height="35"
             /></a>
             <a
               href="https://x.com/rajsinha08_"
               title="X@rajsinha08_"
               target="_blank"
               ><img
+                class="social-links"
                 src="./public/logo/twitter-icon.png"
                 alt="twitter"
-                width="35"
-                height="35"
             /></a>
           </div>
-          <button id="project-button">
-            <a href="./projects.html">Check Projects</a>
-          </button>
+          <a href="./projects/"
+            ><button id="project-button">Check Projects</button></a
+          >
         </div>
         <div id="my-photo" class="my-photo">
           <img src="./public/photo.png" alt="photo" />
