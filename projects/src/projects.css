@@ -1,3 +1,7 @@
+:root {
+  --primary-page-color: #191627; /* Blue */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,14 +14,8 @@
 
 body {
   background-color: #191627;
-  height: 100vh;
-
+  min-height: 100vh;
   position: relative;
-}
-
-main .to-center {
-  width: 65vw;
-  margin: 0 auto;
 }
 
 main {
@@ -27,47 +25,19 @@ main {
   height: 100%;
 }
 
-header {
+main header {
   display: flex;
   justify-content: space-between;
-  padding-top: 2rem;
+  width: 65vw;
+  margin: 2rem auto 1rem;
 }
 
-header #logo {
-  font-family: "Montserrat";
-  font-weight: bold;
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  text-decoration: underline;
-  letter-spacing: 0.15rem;
-}
-
-header ul#header-socials {
-  display: flex;
-  justify-content: space-between;
-  gap: 3rem;
-}
-
-#resume {
-  width: 2.6vw;
-  height: 6vh;
-  min-height: 42px;
-  min-width: 40px;
-}
-
-#gmail {
-  width: 2.5vw;
-  height: 5vh;
-  min-height: 35px;
-  min-width: 35px;
-}
-
-h1 {
+main h1 {
   text-align: center;
   font-size: 4rem;
 }
 
-.cards-container {
+main div.cards-container {
   max-height: 65vh;
   width: 100vw;
   margin-top: 2rem;
@@ -82,11 +52,44 @@ h1 {
   align-items: center;
 }
 
-.cards-container::-webkit-scrollbar {
+main div.cards-container::-webkit-scrollbar {
   display: none;
 }
 
-.pr-card {
+header #logo {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: 0.15rem;
+}
+
+header #nav-container ul#header-socials {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+header #nav-container #resume {
+  width: 2.6vw;
+  height: 6vh;
+  min-height: 42px;
+  min-width: 40px;
+}
+
+header #nav-container #home-button {
+  display: none;
+}
+
+header #nav-container #gmail {
+  width: 2.5vw;
+  height: 5vh;
+  min-height: 35px;
+  min-width: 35px;
+}
+
+.cards-container .pr-card {
   min-width: 65vw;
   width: 65vw;
   border: 2px solid rgb(86, 85, 85);
@@ -95,15 +98,15 @@ h1 {
   display: flex;
 }
 
-.pr-card .pr-img {
+.cards-container .pr-card .pr-img {
   width: 30%;
 }
 
-.pr-img #landscape-orient {
+.cards-container .pr-card .pr-img #landscape-orient {
   display: none;
 }
 
-.pr-img #portrait-orient {
+.cards-container .pr-card .pr-img #portrait-orient {
   display: block;
   width: 100%;
   object-fit: cover;
@@ -112,15 +115,15 @@ h1 {
   object-position: top;
 }
 
-.pr-img {
+.cards-container .pr-card .pr-img {
   transition: transform 0.2s ease-in-out;
 }
 
-.pr-img:hover {
+.cards-container .pr-card .pr-img:hover {
   transform: scale(1.15);
 }
 
-.pr-info {
+.cards-container .pr-card .pr-info {
   width: 70%;
   padding: 0 2rem;
   font-size: 1.5rem;
@@ -130,7 +133,7 @@ h1 {
   gap: 1.5rem;
 }
 
-.pr-title {
+.cards-container .pr-card .pr-title {
   font-size: 2.25rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -141,30 +144,30 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-.pr-desc {
+.cards-container .pr-card .pr-desc {
   font-family: system-ui;
   font-weight: lighter;
 }
 
-.pr-stack ul {
+.cards-container .pr-card .pr-stack ul {
   display: flex;
   justify-content: left;
   gap: 1.5rem;
 }
 
-.pr-stack img {
+.cards-container .pr-card .pr-stack img {
   width: 3rem;
   height: 3rem;
 }
 
-.pr-links {
+.cards-container .pr-card .pr-links {
   display: flex;
   flex-direction: row;
   justify-content: left;
   gap: 1.5rem;
 }
 
-.pr-links button {
+.cards-container .pr-card .pr-links button {
   padding: 1rem;
   background: none;
   border-radius: 1rem;
@@ -173,41 +176,70 @@ h1 {
   font-size: 1.2rem;
 }
 
-.pr-links .source-icon img {
+.cards-container .pr-card .pr-links .source-icon img {
   height: 1.5rem;
   width: 1.5rem;
   background-color: white;
   margin-left: 1rem;
 }
 
-@media screen and (max-width: 1465px) {
-  #logo {
-    display: none;
-  }
-  main .to-center {
-    width: 65vw;
+@media screen and (max-width: 1200px) {
+  main header {
+    margin: 2rem auto 3rem;
   }
 
-  #nav-container {
+  main h1 {
+    font-size: 6vw;
+  }
+
+  header #logo {
+    display: none;
+  }
+
+  header #nav-container {
     width: 100%;
   }
 
   header ul#header-socials {
     width: 100%;
   }
-  .pr-card {
+
+  header ul#header-socials #resume {
+    width: 5.5vw;
+    height: 6vw;
+  }
+
+  header ul#header-socials #gmail {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  header ul#header-socials #home-button {
+    display: block;
+    border: none;
+    background: transparent;
+  }
+
+  header #home-button img {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .cards-container .pr-card {
+    min-width: 45vw;
+    width: 45vw;
     flex-direction: column;
   }
-  .pr-card .pr-img {
+  .cards-container .pr-card .pr-img {
     width: 100%;
     margin-bottom: 1rem;
   }
 
-  .pr-img #portrait-orient {
+  .cards-container .pr-img #portrait-orient {
     display: none;
   }
 
-  .pr-img #landscape-orient {
+  .cards-container .pr-img #landscape-orient {
     display: block;
     width: 100%;
     height: 100%;
@@ -215,64 +247,106 @@ h1 {
     border-radius: 1rem;
   }
 
-  .pr-info {
+  .cards-container .pr-card .pr-info {
     width: 100%;
     padding: 0;
+  }
+
+  .cards-container .pr-card .pr-title {
+    text-align: center;
+    font-size: 3.5vw;
+  }
+
+  .cards-container .pr-card .pr-desc {
+    text-align: justify;
+    font-size: 2vw;
+  }
+
+  .cards-container .pr-card .pr-stack {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cards-container .pr-card .pr-links {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  #resume {
+  main h1 {
+    font-size: 8vw;
+  }
+
+  main div.cards-container {
+    top: 55%;
+    gap: 3rem;
+  }
+
+  header ul#header-socials #resume {
     width: 6.6vw;
     height: 6vh;
     min-height: 42px;
     min-width: 40px;
   }
 
-  #gmail {
+  header ul#header-socials #home-button img {
     width: 6.5vw;
     height: 5vh;
     min-height: 35px;
     min-width: 35px;
   }
 
-  #logo {
-    display: none;
-  }
-  main .to-center {
-    width: 65vw;
-  }
-
-  #nav-container {
-    width: 100%;
+  header ul#header-socials #gmail {
+    width: 6.5vw;
+    height: 5vh;
+    min-height: 35px;
+    min-width: 35px;
   }
 
-  header ul#header-socials {
-    width: 100%;
+  .cards-container .pr-card {
+    min-width: 60vw;
+    width: 60vw;
+    flex-direction: column;
   }
 
-  .cards-container {
-    top: 50%;
-    gap: 4rem;
+  .cards-container .pr-card .pr-title {
+    text-align: center;
+    font-size: 5.5vw;
   }
-  .pr-info {
-    font-size: 1.8rem;
+
+  .cards-container .pr-card .pr-desc {
+    text-align: justify;
+    font-size: 2.5vw;
   }
-  .pr-title {
-    font-size: 3rem;
+
+  .cards-container .pr-card .pr-stack img {
+    width: 5vw;
+    height: 5vw;
   }
-  .github-link a,
-  .site-link a {
-    font-size: 1.5rem;
+
+  .cards-container .pr-card .pr-links button {
+    font-size: 2vw;
   }
 }
 
 @media screen and (max-width: 540px) {
-  #logo {
-    display: none;
+  main header {
+    margin: 2rem auto 1rem;
   }
+
   main .to-center {
     width: 85vw;
+  }
+
+  main h1.to-center {
+    width: 100%;
+    font-size: 10vw;
+  }
+
+  header #logo {
+    display: none;
   }
 
   #nav-container {
@@ -283,31 +357,74 @@ h1 {
     width: 100%;
   }
 
-  h1 {
-    font-size: 3rem;
-  }
-
-  .pr-title {
-    font-size: 2.2rem;
-  }
-
-  .pr-info {
-    font-size: 1.2rem;
-    gap: 1rem;
-  }
-
-  .pr-card {
-    width: 85vw;
-    padding: 0.5rem;
-    border-radius: 1rem;
-  }
-
-  .cards-container {
+  main div.cards-container {
     gap: 2rem;
   }
 
-  .pr-stack img {
-    width: 2rem;
-    height: 2rem;
+  .cards-container .pr-card {
+    min-width: 75vw;
+    width: 75vw;
+    padding: 4vw;
+  }
+
+  .cards-container .pr-card .pr-img #portrait-orient {
+    max-height: 55vw;
+  }
+
+  .cards-container .pr-card .pr-title {
+    font-size: 7.5vw;
+  }
+
+  .cards-container .pr-card .pr-desc {
+    font-size: 3.8vw;
+  }
+
+  .cards-container .pr-card .pr-stack img {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .cards-container .pr-card .pr-links button {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  main header {
+    width: 55vw;
+  }
+
+  header ul#header-socials #resume {
+    width: 5vw;
+  }
+  header ul#header-socials #home-button img {
+    width: 5vw;
+  }
+
+  header ul#header-socials #gmail {
+    width: 5vw;
+  }
+
+  main h1 {
+    font-size: 7vw;
+  }
+
+  main div.cards-container {
+    top: 65%;
+  }
+
+  .cards-container .pr-card {
+    min-width: 48vw;
+    width: 48vw;
+  }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  main header {
+    margin: 2rem auto 1rem;
+  }
+
+  main div.cards-container {
+    top: 78%;
   }
 }

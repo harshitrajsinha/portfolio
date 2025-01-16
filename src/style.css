@@ -225,7 +225,7 @@ section .my-photo img:hover {
 
   header #nav-container #home-button {
     display: block;
-    background-color: var(--primary-page-color);
+    background: transparent;
     border: none;
   }
 
@@ -330,7 +330,7 @@ section .my-photo img:hover {
 /* Screens equal to mobile */
 @media screen and (max-width: 540px) {
   header #nav-container #gmail {
-    width: 3.8vw;
+    width: 9.8vw;
     height: 3vh;
     min-height: 35px;
     min-width: 35px;
@@ -349,8 +349,8 @@ section .my-photo img:hover {
   }
 
   section #body-socials img.social-links {
-    height: 4vh;
-    width: 6.5vw;
+    height: 5vh;
+    width: 8vw;
   }
 
   section #info #body-socials {
@@ -358,9 +358,9 @@ section .my-photo img:hover {
   }
 
   section #info #project-button {
-    width: 29vw;
+    width: 35vw;
     height: 10vw;
-    font-size: 3vw;
+    font-size: 3.5vw;
   }
 
   section .my-photo {
