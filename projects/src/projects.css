@@ -210,8 +210,8 @@ img.portrait-orient {
   }
 
   .socials-gmail {
-    width: 5vw;
-    height: 5vw;
+    width: 3.5vw;
+    height: 3.5vh;
   }
 
   .home-button {
@@ -369,11 +369,11 @@ img.portrait-orient {
 
   img.portrait-orient {
     display: none;
-    /* max-height: 55vw; */
   }
 
   img.landscape-orient {
     display: block;
+    max-height: 55vw;
   }
 
   .card-info__title {
