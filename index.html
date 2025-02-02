@@ -122,7 +122,23 @@
           >
         </div>
         <div id="my-photo" class="my-photo">
-          <img src="./public/photo.png" alt="photo" />
+          <img class="my-photo__image" src="./public/photo.png" alt="photo" />
+          <div class="play-btn-container">
+            <img
+              id="openVideo"
+              class="my-photo__play-btn"
+              src="./public/play-button.png"
+              alt="video play button"
+            />
+            <div class="video-modal" id="videoModal">
+              <div class="video-container">
+                <span class="close-btn" id="closeVideo">&times;</span>
+                <video id="videoPlayer" controls>
+                  <source src="./public/video-resume.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

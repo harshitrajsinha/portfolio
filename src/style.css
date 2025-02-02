@@ -151,14 +151,71 @@ img.social-links {
   animation: glow 1.5s infinite alternate;
 }
 
-.my-photo img {
+.my-photo {
+  position: relative;
+}
+
+.my-photo img.my-photo__image {
   width: 100%;
   height: auto;
   border-radius: 2rem;
 }
 
-.my-photo img:hover {
-  transform: scale(1.05);
+.play-btn-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.my-photo__play-btn {
+  width: 50%;
+  height: 40%;
+  margin: 0 auto;
+}
+
+.my-photo img.my-photo__play-btn:hover {
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
+/* Video Modal */
+.video-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+}
+
+/* Video Styling */
+video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
 }
 
 /* Screens between laptop and tablet */
@@ -318,9 +375,15 @@ img.social-links {
     max-height: 402px;
   }
 
-  .my-photo img {
+  .my-photo img.my-photo__image {
     width: 100%;
     height: auto;
+  }
+
+  .my-photo__play-btn {
+    width: 60%;
+    height: 50%;
+    margin: 0 auto;
   }
 }
 
@@ -390,9 +453,15 @@ img.social-links {
     max-height: 402px;
   }
 
-  .my-photo img {
+  .my-photo img.my-photo__image {
     width: 100%;
     height: auto;
+  }
+
+  .my-photo__play-btn {
+    width: 60%;
+    height: 50%;
+    margin: 0 auto;
   }
 }
 
