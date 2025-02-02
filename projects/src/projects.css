@@ -1,5 +1,5 @@
 :root {
-  --primary-page-color: #191627; /* Blue */
+  --primary-page-color: #191627; /* Dark Blue */
 }
 
 * {
@@ -25,19 +25,19 @@ main {
   height: 100%;
 }
 
-main header {
+header {
   display: flex;
   justify-content: space-between;
   width: 65vw;
   margin: 2rem auto 1rem;
 }
 
-main h1 {
+h1 {
   text-align: center;
   font-size: 4rem;
 }
 
-main div.cards-container {
+.cards-container {
   max-height: 65vh;
   width: 100vw;
   margin-top: 2rem;
@@ -52,11 +52,11 @@ main div.cards-container {
   align-items: center;
 }
 
-main div.cards-container::-webkit-scrollbar {
+.cards-container::-webkit-scrollbar {
   display: none;
 }
 
-header #logo {
+.logo {
   font-family: "Montserrat";
   font-weight: bold;
   font-size: 1.25rem;
@@ -65,31 +65,31 @@ header #logo {
   letter-spacing: 0.15rem;
 }
 
-header #nav-container ul#header-socials {
+.nav-container__socials {
   display: flex;
   justify-content: space-between;
   gap: 3rem;
 }
 
-header #nav-container #resume {
+.socials-resume {
   width: 2.6vw;
   height: 6vh;
   min-height: 42px;
   min-width: 40px;
 }
 
-header #nav-container #home-button {
+.home-button {
   display: none;
 }
 
-header #nav-container #gmail {
+.socials-gmail {
   width: 2.5vw;
   height: 5vh;
   min-height: 35px;
   min-width: 35px;
 }
 
-.cards-container .pr-card {
+.cards-container__card {
   min-width: 65vw;
   width: 65vw;
   border: 2px solid rgb(86, 85, 85);
@@ -98,15 +98,20 @@ header #nav-container #gmail {
   display: flex;
 }
 
-.cards-container .pr-card .pr-img {
+.cards-container__card-img {
   width: 30%;
+  transition: transform 0.2s ease-in-out;
 }
 
-.cards-container .pr-card .pr-img #landscape-orient {
+.cards-container__card-img:hover {
+  transform: scale(1.15);
+}
+
+img.landscape-orient {
   display: none;
 }
 
-.cards-container .pr-card .pr-img #portrait-orient {
+img.portrait-orient {
   display: block;
   width: 100%;
   object-fit: cover;
@@ -115,15 +120,7 @@ header #nav-container #gmail {
   object-position: top;
 }
 
-.cards-container .pr-card .pr-img {
-  transition: transform 0.2s ease-in-out;
-}
-
-.cards-container .pr-card .pr-img:hover {
-  transform: scale(1.15);
-}
-
-.cards-container .pr-card .pr-info {
+.cards-container__card-info {
   width: 70%;
   padding: 0 2rem;
   font-size: 1.5rem;
@@ -133,7 +130,7 @@ header #nav-container #gmail {
   gap: 1.5rem;
 }
 
-.cards-container .pr-card .pr-title {
+.card-info__title {
   font-size: 2.25rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -144,30 +141,30 @@ header #nav-container #gmail {
   -webkit-text-fill-color: transparent;
 }
 
-.cards-container .pr-card .pr-desc {
+.card-info__desc {
   font-family: system-ui;
   font-weight: lighter;
 }
 
-.cards-container .pr-card .pr-stack ul {
+.card-info__stack ul {
   display: flex;
   justify-content: left;
   gap: 1.5rem;
 }
 
-.cards-container .pr-card .pr-stack img {
+.card-info__stack img {
   width: 3rem;
   height: 3rem;
 }
 
-.cards-container .pr-card .pr-links {
+.card-info__links {
   display: flex;
   flex-direction: row;
   justify-content: left;
   gap: 1.5rem;
 }
 
-.cards-container .pr-card .pr-links button {
+.card-info__links button {
   padding: 1rem;
   background: none;
   border-radius: 1rem;
@@ -176,7 +173,7 @@ header #nav-container #gmail {
   font-size: 1.2rem;
 }
 
-.cards-container .pr-card .pr-links .source-icon img {
+.card-info__links .source-icon img {
   height: 1.5rem;
   width: 1.5rem;
   background-color: white;
@@ -184,62 +181,65 @@ header #nav-container #gmail {
 }
 
 @media screen and (max-width: 1200px) {
-  main header {
+  /* body {
+    background-color: red;
+  } */
+  header {
     margin: 2rem auto 3rem;
   }
 
-  main h1 {
+  h1 {
     font-size: 6vw;
   }
 
-  header #logo {
+  .logo {
     display: none;
   }
 
-  header #nav-container {
+  .nav-container {
     width: 100%;
   }
 
-  header ul#header-socials {
+  .nav-container__socials {
     width: 100%;
   }
 
-  header ul#header-socials #resume {
+  .socials-resume {
     width: 5.5vw;
     height: 6vw;
   }
 
-  header ul#header-socials #gmail {
+  .socials-gmail {
     width: 5vw;
     height: 5vw;
   }
 
-  header ul#header-socials #home-button {
+  .home-button {
     display: block;
     border: none;
     background: transparent;
   }
 
-  header #home-button img {
+  .home-button img {
     width: 5vw;
     height: 5vw;
   }
 
-  .cards-container .pr-card {
+  .cards-container__card {
     min-width: 45vw;
     width: 45vw;
     flex-direction: column;
   }
-  .cards-container .pr-card .pr-img {
+  .cards-container__card-img {
     width: 100%;
     margin-bottom: 1rem;
   }
 
-  .cards-container .pr-img #portrait-orient {
+  img.portrait-orient {
     display: none;
   }
 
-  .cards-container .pr-img #landscape-orient {
+  img.landscape-orient {
     display: block;
     width: 100%;
     height: 100%;
@@ -247,27 +247,27 @@ header #nav-container #gmail {
     border-radius: 1rem;
   }
 
-  .cards-container .pr-card .pr-info {
+  .cards-container__card-info {
     width: 100%;
     padding: 0;
   }
 
-  .cards-container .pr-card .pr-title {
+  .card-info__title {
     text-align: center;
     font-size: 3.5vw;
   }
 
-  .cards-container .pr-card .pr-desc {
+  .card-info__desc {
     text-align: justify;
     font-size: 2vw;
   }
 
-  .cards-container .pr-card .pr-stack {
+  .card-info__stack {
     display: flex;
     justify-content: center;
   }
 
-  .cards-container .pr-card .pr-links {
+  .card-info__links {
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -275,156 +275,161 @@ header #nav-container #gmail {
 }
 
 @media screen and (max-width: 1024px) {
-  main h1 {
+  h1 {
     font-size: 8vw;
   }
 
-  main div.cards-container {
+  .cards-container {
     top: 55%;
     gap: 3rem;
   }
 
-  header ul#header-socials #resume {
+  .socials-resume {
     width: 6.6vw;
     height: 6vh;
     min-height: 42px;
     min-width: 40px;
   }
 
-  header ul#header-socials #home-button img {
+  .home-button img {
     width: 6.5vw;
     height: 5vh;
     min-height: 35px;
     min-width: 35px;
   }
 
-  header ul#header-socials #gmail {
+  .socials-gmail {
     width: 6.5vw;
-    height: 5vh;
+    height: 4.5vh;
     min-height: 35px;
     min-width: 35px;
   }
 
-  .cards-container .pr-card {
+  .cards-container__card {
     min-width: 60vw;
     width: 60vw;
     flex-direction: column;
   }
 
-  .cards-container .pr-card .pr-title {
+  .card-info__title {
     text-align: center;
     font-size: 5.5vw;
   }
 
-  .cards-container .pr-card .pr-desc {
+  .card-info__desc {
     text-align: justify;
     font-size: 2.5vw;
   }
 
-  .cards-container .pr-card .pr-stack img {
+  .card-info__stack img {
     width: 5vw;
     height: 5vw;
   }
 
-  .cards-container .pr-card .pr-links button {
+  .card-info__links button {
     font-size: 2vw;
   }
 }
 
 @media screen and (max-width: 540px) {
-  main header {
+  header {
     margin: 2rem auto 1rem;
   }
 
-  main .to-center {
+  header.to-center {
     width: 85vw;
   }
 
-  main h1.to-center {
+  h1.to-center {
     width: 100%;
     font-size: 10vw;
   }
 
-  header #logo {
+  .logo {
     display: none;
   }
 
-  #nav-container {
+  .nav-container {
     width: 100%;
   }
 
-  header ul#header-socials {
+  .nav-container__socials {
     width: 100%;
   }
 
-  main div.cards-container {
+  .cards-container {
     gap: 2rem;
   }
 
-  .cards-container .pr-card {
+  .cards-container__card {
     min-width: 75vw;
     width: 75vw;
     padding: 4vw;
   }
 
-  .cards-container .pr-card .pr-img #portrait-orient {
-    max-height: 55vw;
+  img.portrait-orient {
+    display: none;
+    /* max-height: 55vw; */
   }
 
-  .cards-container .pr-card .pr-title {
+  img.landscape-orient {
+    display: block;
+  }
+
+  .card-info__title {
     font-size: 7.5vw;
   }
 
-  .cards-container .pr-card .pr-desc {
+  .card-info__desc {
     font-size: 3.8vw;
   }
 
-  .cards-container .pr-card .pr-stack img {
+  .card-info__stack img {
     width: 8vw;
     height: 8vw;
   }
 
-  .cards-container .pr-card .pr-links button {
+  .card-info__links button {
     font-size: 4vw;
   }
 }
 
 @media screen and (max-width: 1024px) and (orientation: landscape) {
-  main header {
+  header {
     width: 55vw;
   }
 
-  header ul#header-socials #resume {
+  .socials-resume {
     width: 5vw;
   }
-  header ul#header-socials #home-button img {
-    width: 5vw;
-  }
-
-  header ul#header-socials #gmail {
+  .home-button img {
     width: 5vw;
   }
 
-  main h1 {
+  .socials-gmail {
+    width: 5vw;
+  }
+
+  h1 {
     font-size: 7vw;
   }
 
-  main div.cards-container {
+  .cards-container {
     top: 65%;
   }
 
-  .cards-container .pr-card {
+  .cards-container__card {
     min-width: 48vw;
     width: 48vw;
   }
 }
 
 @media screen and (max-width: 1024px) and (orientation: landscape) {
-  main header {
+  header {
     margin: 2rem auto 1rem;
   }
 
-  main div.cards-container {
+  .cards-container {
     top: 78%;
   }
 }
