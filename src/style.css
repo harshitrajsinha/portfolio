@@ -460,6 +460,7 @@ video {
   }
 
   .my-photo__play-btn {
+    opacity: 0.8;
     width: 50%;
     height: 40%;
     margin: 0 auto;
