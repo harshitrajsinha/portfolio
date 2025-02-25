@@ -171,8 +171,9 @@ img.social-links {
 }
 
 .my-photo__play-btn {
+  opacity: 0.85;
   width: 50%;
-  height: 40%;
+  height: 35%;
   margin: 0 auto;
 }
 
@@ -381,9 +382,9 @@ video {
   }
 
   .my-photo__play-btn {
-    opacity: 0.8;
+    opacity: 0.85;
     width: 50%;
-    height: 40%;
+    height: 35%;
     margin: 0 auto;
   }
 }
@@ -460,9 +461,9 @@ video {
   }
 
   .my-photo__play-btn {
-    opacity: 0.8;
+    opacity: 0.85;
     width: 50%;
-    height: 40%;
+    height: 35%;
     margin: 0 auto;
   }
 }
