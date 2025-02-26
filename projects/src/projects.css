@@ -63,6 +63,7 @@ h1 {
 }
 
 .marquee-img {
+  margin-top: 5px;
   width: 4rem;
   height: 4rem;
 }
@@ -78,7 +79,6 @@ h1 {
     rgba(25, 22, 39, 0.778) 90%,
     rgba(25, 22, 39, 0.053)
   );
-  /* border: 1px solid black; */
   width: 671px;
   height: 5rem;
 }
@@ -287,6 +287,22 @@ img.portrait-orient {
     height: 5vw;
   }
 
+  .marquee-left {
+    width: 25rem;
+    left: -50%;
+  }
+
+  .marquee-right {
+    position: absolute;
+    width: 25rem;
+    left: 81%;
+  }
+
+  .cards-container {
+    max-height: 46vh;
+    top: 68%;
+  }
+
   .cards-container__card {
     min-width: 45vw;
     width: 45vw;
@@ -341,8 +357,28 @@ img.portrait-orient {
     font-size: 8vw;
   }
 
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-500px);
+    }
+  }
+
+  .marquee-left {
+    width: 25rem;
+    left: -65%;
+  }
+
+  .marquee-right {
+    position: absolute;
+    width: 25rem;
+    left: 81%;
+  }
+
   .cards-container {
-    top: 55%;
+    top: 50%;
     gap: 3rem;
   }
 
@@ -419,13 +455,47 @@ img.portrait-orient {
     width: 100%;
   }
 
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-450px);
+    }
+  }
+
+  .marquee {
+    animation: scroll 12s linear infinite;
+  }
+
+  .marquee-container {
+    margin-bottom: 0;
+  }
+
+  .marquee-left {
+    width: 10rem;
+    left: -80%;
+  }
+
+  .marquee-right {
+    position: absolute;
+    width: 15rem;
+    left: 81%;
+  }
+
+  .marquee-img {
+    height: 3rem;
+    width: 3rem;
+  }
+
   .cards-container {
     gap: 2rem;
+    margin-top: 5rem;
   }
 
   .cards-container__card {
-    min-width: 75vw;
-    width: 75vw;
+    min-width: 70vw;
+    width: 70vw;
     padding: 4vw;
   }
 
@@ -457,6 +527,18 @@ img.portrait-orient {
 }
 
 @media screen and (max-width: 1024px) and (orientation: landscape) {
+  .marquee-img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .marquee-container {
+    top: -5vh;
+  }
+  .marquee-left {
+    left: -25%;
+    width: 10rem;
+  }
+
   header {
     width: 55vw;
   }
