@@ -35,10 +35,72 @@ header {
 h1 {
   text-align: center;
   font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-551px);
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  /* border: 1px solid green; */
+  width: 40%;
+  margin: 0 auto 2rem;
+}
+
+.marquee {
+  display: flex;
+  gap: 3rem;
+  width: fit-content;
+  animation: scroll 15s linear infinite;
+}
+
+.marquee-img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.marquee-left {
+  z-index: 1000;
+  left: -85%;
+  top: -5px;
+  position: absolute;
+  background: linear-gradient(
+    to right,
+    rgb(25, 22, 39) 80%,
+    rgba(25, 22, 39, 0.778) 90%,
+    rgba(25, 22, 39, 0.053)
+  );
+  /* border: 1px solid black; */
+  width: 671px;
+  height: 5rem;
+}
+
+.marquee-right {
+  z-index: 1000;
+  left: 70%;
+  top: -5px;
+  position: absolute;
+  background: linear-gradient(
+    to left,
+    rgb(25, 22, 39) 80%,
+    rgba(25, 22, 39, 0.778) 90%,
+    rgba(25, 22, 39, 0.053)
+  );
+  /* border: 1px solid black; */
+  width: 671px;
+  height: 5rem;
 }
 
 .cards-container {
-  max-height: 65vh;
+  max-height: 55vh;
   width: 100vw;
   margin-top: 2rem;
   display: flex;
@@ -48,7 +110,7 @@ h1 {
   overflow-x: hidden;
   position: absolute;
   top: 60%;
-  transform: translateY(-50%);
+  transform: translateY(-40%);
   align-items: center;
 }
 
