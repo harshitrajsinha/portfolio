@@ -465,7 +465,7 @@ img.portrait-orient {
   }
 
   .marquee {
-    animation: scroll 12s linear infinite;
+    animation: scroll 12s -3s linear infinite;
   }
 
   .marquee-container {
@@ -490,7 +490,7 @@ img.portrait-orient {
 
   .cards-container {
     gap: 2rem;
-    margin-top: 5rem;
+    top: 52%;
   }
 
   .cards-container__card {
