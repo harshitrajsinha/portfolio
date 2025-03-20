@@ -223,10 +223,10 @@ video {
 
 @keyframes scroll {
   0% {
-    transform: translateX(150%);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(-551px);
+    transform: translateX(-851px);
   }
 }
 
@@ -698,7 +698,7 @@ input[type="radio"]#javascript:checked ~ .javascript {
       transform: translateX(50%);
     }
     100% {
-      transform: translateX(-451px);
+      transform: translateX(-651px);
     }
   }
 
