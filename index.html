@@ -79,7 +79,8 @@
           </ul>
         </nav>
       </header>
-      <section>
+
+      <section id="information">
         <div class="info">
           <div class="info__desc">
             <p class="desc-exclamation">Hey!</p>
@@ -130,7 +131,7 @@
                 alt="twitter"
             /></a>
           </div>
-          <a href="./projects/"
+          <a href="#projects"
             ><button class="project-button">Check Projects</button></a
           >
         </div>
@@ -149,6 +150,265 @@
                 <video id="videoPlayer" controls>
                   <source src="./public/video-resume.mp4" type="video/mp4" />
                 </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="marquee-container">
+        <div class="marquee-left"></div>
+        <div class="marquee">
+          <img
+            class="marquee-img"
+            src="./public/projects/stack-icons/vuejs.png"
+            alt="vuejs"
+          />
+          <img
+            class="marquee-img"
+            src="./public/projects/stack-icons/js.png"
+            alt="js"
+          />
+          <img
+            class="marquee-img"
+            src="./public/projects/stack-icons/html5.png"
+            alt="html5"
+          />
+          <img
+            class="marquee-img"
+            src="./public/projects/stack-icons/css-3.png"
+            alt="css3"
+          />
+          <img
+            class="marquee-img"
+            src="./public/projects/stack-icons/rest.png"
+            alt="rest"
+          />
+          <img
+            class="marquee-img"
+            src="./public/projects/stack-icons/graphql.png"
+            alt="graphql"
+          />
+        </div>
+
+        <div class="marquee-right"></div>
+      </div>
+      <section id="projects">
+        <div class="projects">
+          <h1>Projects</h1>
+          <input
+            type="radio"
+            id="featured"
+            name="language"
+            value="Featured"
+            checked
+          />
+          <label for="featured">Featured</label>
+          <input type="radio" id="vuejs" name="language" value="Vue" />
+          <label for="vuejs">Vue</label>
+          <input
+            type="radio"
+            id="javascript"
+            name="language"
+            value="JavaScript"
+          />
+          <label for="javascript">JavaScript</label>
+
+          <div class="cards-container__card featured vuejs javascript">
+            <div class="cards-container__card-img">
+              <img
+                class="portrait-orient"
+                src="./public/projects/todo-portrait.png"
+              />
+              <img
+                class="landscape-orient"
+                src="./public/projects/todo-landscape.png"
+              />
+            </div>
+            <div class="cards-container__card-info">
+              <div class="card-info__title">Momentodo</div>
+              <div class="card-info__desc">
+                A non persistant Todo application that lets you save your
+                minimal work right on your browser. This todo application is
+                just the right fit for your daily task tracking and scheduling.
+              </div>
+              <div class="card-info__stack">
+                <ul>
+                  <li>
+                    <img
+                      src="./public/projects/stack-icons/vuejs.png"
+                      alt="VueJS"
+                      title="VueJS"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="./public/projects/stack-icons/css-3.png"
+                      alt="CSS3"
+                      title="CSS3"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="./public/projects/stack-icons/js.png"
+                      alt="VanillaJS"
+                      title="VanillaJS"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="card-info__links">
+                <a
+                  href="https://github.com/harshitrajsinha/todo-vue"
+                  target="_blank"
+                  ><button class="github-link">
+                    View Source<span class="source-icon"
+                      ><img src="./public/projects/stack-icons/github-logo.png"
+                    /></span></button
+                ></a>
+
+                <a
+                  href="https://phenomenal-hotteok-3af725.netlify.app/"
+                  target="_blank"
+                  ><button class="site-link">Visit Site</button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="cards-container__card featured javascript">
+            <div class="cards-container__card-img">
+              <img
+                class="portrait-orient"
+                src="./public/projects/speed-typing-portrait.png"
+              />
+              <img
+                class="landscape-orient"
+                src="./public/projects/speed-typing-landscape.png"
+              />
+            </div>
+            <div class="cards-container__card-info">
+              <div class="card-info__title">Speed Typing</div>
+              <div class="card-info__desc">
+                An engaging and fun typing game designed to improve typing speed
+                and accuracy. This game features a collection of unique quotes
+                fetched from an API, creating a dynamic experience with every
+                session.
+              </div>
+              <div class="card-info__stack">
+                <ul>
+                  <li>
+                    <img
+                      src="./public/projects/stack-icons/html5.png"
+                      alt="HTML5"
+                      title="HTML5"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="./public/projects/stack-icons/css-3.png"
+                      alt="CSS3"
+                      title="CSS3"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="./public/projects/stack-icons/js.png"
+                      alt="VanillaJS"
+                      title="VanillaJS"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="./public/projects/stack-icons/rest.png"
+                      alt="REST"
+                      title="REST"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="card-info__links">
+                <a
+                  href="https://github.com/harshitrajsinha/speed-typing"
+                  target="_blank"
+                  ><button class="github-link">
+                    View Source<span class="source-icon"
+                      ><img src="./public/projects/stack-icons/github-logo.png"
+                    /></span></button
+                ></a>
+
+                <a
+                  href="https://harshitrajsinha.github.io/speed-typing/"
+                  target="_blank"
+                  ><button class="site-link">Visit Site</button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="cards-container__card featured javascript">
+            <div class="cards-container__card-img">
+              <img
+                class="portrait-orient"
+                src="./public/projects/weather-app-portrait.png"
+              />
+              <img
+                class="landscape-orient"
+                src="./public/projects/weather-app-landscape.png"
+              />
+            </div>
+            <div class="cards-container__card-info">
+              <div class="card-info__title">Weather App</div>
+              <div class="card-info__desc">
+                Discover accurate and up-to-date weather information with this
+                user-friendly weather app. Get real-time data on temperature,
+                humidity, wind speed, and more, along with 24-hour forecasts to
+                plan the day.
+              </div>
+              <div class="card-info__stack">
+                <ul>
+                  <li>
+                    <img
+                      src="./public/projects/stack-icons/html5.png"
+                      alt="HTML5"
+                      title="HTML5"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="./public/projects/stack-icons/css-3.png"
+                      alt="CSS3"
+                      title="CSS3"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="./public/projects/stack-icons/js.png"
+                      alt="VanillaJS"
+                      title="VanillaJS"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="./public/projects/stack-icons/graphql.png"
+                      alt="GraphQL"
+                      title="GraphQL"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="card-info__links">
+                <a
+                  href="https://github.com/harshitrajsinha/weather-app"
+                  target="_blank"
+                  ><button class="github-link">
+                    View Source<span class="source-icon"
+                      ><img src="./public/projects/stack-icons/github-logo.png"
+                    /></span></button
+                ></a>
+
+                <a
+                  href="https://harshitrajsinha.github.io/weather-app/"
+                  target="_blank"
+                  ><button class="site-link">Visit Site</button></a
+                >
               </div>
             </div>
           </div>

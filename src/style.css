@@ -30,13 +30,14 @@ img:hover {
 header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 section {
   display: flex;
   justify-content: space-between;
   padding-top: 5rem;
+  margin-bottom: 4rem;
 }
 
 .logo {
@@ -217,6 +218,222 @@ video {
   color: white;
   cursor: pointer;
   z-index: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(-551px);
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  /* border: 1px solid green; */
+  width: 65vw;
+  /* margin: 0 auto 2rem; */
+}
+
+.marquee {
+  display: flex;
+  gap: 4rem;
+  width: fit-content;
+  animation: scroll 20s linear infinite;
+}
+
+.marquee-img {
+  margin-top: 5px;
+  width: 4rem;
+  height: 4rem;
+  opacity: 0.5;
+}
+
+.marquee-left {
+  z-index: 1000;
+  left: -45%;
+  top: -5px;
+  position: absolute;
+  background: linear-gradient(
+    to right,
+    rgb(25, 22, 39) 80%,
+    rgba(25, 22, 39, 0.778) 90%,
+    rgba(25, 22, 39, 0.053)
+  );
+  width: 671px;
+  height: 5rem;
+}
+
+.marquee-right {
+  z-index: 1000;
+  left: 75%;
+  top: -5px;
+  position: absolute;
+  background: linear-gradient(
+    to left,
+    rgb(25, 22, 39) 80%,
+    rgba(25, 22, 39, 0.778) 90%,
+    rgba(25, 22, 39, 0.053)
+  );
+  /* border: 1px solid black; */
+  width: 671px;
+  height: 5rem;
+}
+
+.projects {
+  width: 100%;
+}
+
+.projects h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.project-group {
+  margin-bottom: 2rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin: 1rem;
+  width: 10rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #3f5bda;
+}
+
+input[type="radio"]:not(:checked) + label {
+  background-color: #9a3ad5;
+}
+
+.cards-container__card {
+  max-height: 45vh;
+  height: 45vh;
+  min-width: 65vw;
+  width: 65vw;
+  border: 2px solid rgb(86, 85, 85);
+  border-radius: 2rem;
+  padding: 1.5rem;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-bottom: 3rem;
+}
+
+.cards-container__card-img {
+  width: 30%;
+  transition: transform 0.2s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+img.landscape-orient {
+  display: none;
+}
+
+img.portrait-orient {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  height: 20.5rem;
+  max-height: 20.5rem;
+  object-position: top;
+}
+
+.cards-container__card-info {
+  width: 70%;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card-info__title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline;
+  background: linear-gradient(to right, #ea5fb3, #bd49da, #913ef1, #f87777);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-info__desc {
+  font-family: system-ui;
+  font-weight: lighter;
+}
+
+.card-info__stack ul {
+  display: flex;
+  justify-content: left;
+  gap: 1.5rem;
+}
+
+.card-info__stack img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.card-info__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 1.5rem;
+}
+
+.card-info__links button {
+  display: flex;
+  padding: 1rem;
+  background: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: 2px solid rgb(86, 85, 85);
+  font-size: 1.2rem;
+}
+
+.card-info__links .source-icon img {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: white;
+  margin-left: 1rem;
+}
+
+div.cards-container__card {
+  display: none;
+}
+
+input[type="radio"]#featured:checked ~ .featured {
+  display: flex;
+}
+
+input[type="radio"]#vuejs:checked ~ .vuejs {
+  display: flex;
+}
+
+input[type="radio"]#javascript:checked ~ .javascript {
+  display: flex;
 }
 
 /* Screens between laptop and tablet */
