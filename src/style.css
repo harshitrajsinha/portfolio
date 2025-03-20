@@ -185,6 +185,7 @@ img.social-links {
 
 /* Video Modal */
 .video-modal {
+  z-index: 5;
   display: none; /* Hidden by default */
   position: fixed;
   top: 0;
@@ -241,7 +242,7 @@ video {
   display: flex;
   gap: 4rem;
   width: fit-content;
-  animation: scroll 20s linear infinite;
+  animation: scroll 18s linear infinite;
 }
 
 .marquee-img {
@@ -252,7 +253,7 @@ video {
 }
 
 .marquee-left {
-  z-index: 1000;
+  z-index: 2;
   left: -45%;
   top: -5px;
   position: absolute;
@@ -267,7 +268,7 @@ video {
 }
 
 .marquee-right {
-  z-index: 1000;
+  z-index: 2;
   left: 75%;
   top: -5px;
   position: absolute;
@@ -461,7 +462,7 @@ input[type="radio"]#javascript:checked ~ .javascript {
 
   .socials-gmail {
     width: 4vw;
-    height: 5vh;
+    height: 4vh;
   }
 
   section {
@@ -480,8 +481,35 @@ input[type="radio"]#javascript:checked ~ .javascript {
   }
 
   section .my-photo img {
-    width: 100%;
+    width: 65%;
     height: auto;
+  }
+
+  .marquee-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .marquee-right {
+    left: 66%;
+  }
+
+  .cards-container__card-img {
+    width: 35%;
+  }
+
+  .cards-container__card {
+    max-height: 40vh;
+    height: auto;
+    min-width: 72vw;
+    width: 65vw;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+
+  img.portrait-orient {
+    max-height: 21vh;
+    height: 21vh;
   }
 }
 
@@ -529,14 +557,14 @@ input[type="radio"]#javascript:checked ~ .javascript {
     min-width: 35px;
   }
 
-  section {
+  section#information {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 8rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     padding-top: 0;
   }
 
@@ -600,9 +628,47 @@ input[type="radio"]#javascript:checked ~ .javascript {
 
   .my-photo__play-btn {
     opacity: 0.85;
-    width: 50%;
-    height: 35%;
+    width: 65%;
+    height: 50%;
     margin: 0 auto;
+  }
+
+  .marquee-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .marquee-left {
+    left: -14%;
+    width: 180px;
+  }
+
+  .marquee-right {
+    left: 75%;
+    width: 185px;
+  }
+
+  section#projects {
+    width: 70vw;
+    margin: 0 auto;
+  }
+
+  .cards-container__card-img {
+    width: 35%;
+  }
+
+  .cards-container__card {
+    max-height: 25vh;
+    height: 25vh;
+    min-width: 72vw;
+    width: 65vw;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+
+  img.portrait-orient {
+    max-height: 21vh;
+    height: 21vh;
   }
 }
 
@@ -627,6 +693,19 @@ input[type="radio"]#javascript:checked ~ .javascript {
 
 /* Screens equal to mobile */
 @media screen and (max-width: 540px) {
+  @keyframes scroll {
+    0% {
+      transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(-451px);
+    }
+  }
+
+  .marquee {
+    animation: scroll 15s linear infinite;
+  }
+
   .socials-gmail {
     width: 9.8vw;
     height: 3vh;
@@ -634,8 +713,8 @@ input[type="radio"]#javascript:checked ~ .javascript {
     min-width: 35px;
   }
 
-  section {
-    margin-top: 2vw;
+  section#information {
+    margin-top: 12vw;
   }
 
   .info {
@@ -682,6 +761,96 @@ input[type="radio"]#javascript:checked ~ .javascript {
     width: 50%;
     height: 35%;
     margin: 0 auto;
+  }
+
+  .marquee-left {
+    left: -3%;
+    width: 50px;
+  }
+
+  .marquee-right {
+    left: 85%;
+    width: 50px;
+  }
+
+  .marquee {
+    gap: 10vw;
+  }
+
+  .marquee-img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  section#projects {
+    padding-top: 1.5rem;
+    width: 80vw;
+  }
+
+  .projects h1 {
+    font-size: 11vw;
+  }
+
+  label {
+    margin: 0;
+    width: 6rem;
+    height: 3rem;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .cards-container__card {
+    height: 76vh;
+    max-height: 76vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    padding: 4vw;
+  }
+
+  .cards-container__card-img {
+    width: 100%;
+  }
+
+  img.portrait-orient {
+    display: none;
+  }
+
+  img.landscape-orient {
+    display: block;
+    width: 100%;
+    max-height: 28vh;
+    height: 28vh;
+  }
+
+  .cards-container__card-info {
+    width: 100%;
+    padding: 0;
+    gap: 1rem;
+  }
+
+  .card-info__title {
+    font-size: 7.5vw;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .card-info__desc {
+    font-size: 4vw;
+  }
+
+  .card-info__stack ul {
+    justify-content: center;
+  }
+
+  .card-info__stack img {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .card-info__links button {
+    font-size: 4vw;
   }
 }
 
