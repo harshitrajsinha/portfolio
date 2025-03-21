@@ -283,11 +283,93 @@ video {
   height: 5rem;
 }
 
+section#work-experience {
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.list-component {
+  border-left: 1px solid gray;
+  list-style: none;
+  margin: 0 auto;
+  margin-left: 8rem;
+  width: 90%;
+  padding-top: 1rem;
+}
+
+.list-component__item {
+  background: url(https://www.computerhope.com/issues/pictures/bullet.gif)
+    no-repeat top left;
+  background-position: top left;
+  padding: 0rem 3rem;
+  margin-left: 3.2rem;
+  position: relative;
+  right: 4.2rem;
+  margin-bottom: 1rem;
+  top: 1rem;
+}
+
+.list-component__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 3rem;
+  position: relative;
+  bottom: 1.5rem;
+}
+
+.list-component__card-year {
+  font-size: 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.list-component__card-title {
+  text-decoration: underline;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+}
+
+.list-component__card-desc {
+  color: gray;
+}
+
+u {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.list-component__card-desc li {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  list-style: disc;
+  text-align: justify;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.list-component__skills {
+  font-size: 1.5rem;
+}
+
+.list-component__skills > p:first-child {
+  text-decoration: underline;
+  margin: 0.5rem 0;
+}
+
+.list-component__skills .skills-list {
+  color: #bc6eed;
+}
+
 .projects {
   width: 100%;
 }
 
-.projects h1 {
+.projects h1,
+h1.work-experience {
   text-align: center;
   font-size: 4rem;
   margin-bottom: 3rem;
