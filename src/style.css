@@ -864,6 +864,37 @@ input[type="radio"]#javascript:checked ~ .javascript {
     height: 3rem;
   }
 
+  section#work-experience > h1 {
+    font-size: 10vw;
+  }
+
+  .list-component {
+    margin: 0;
+    width: 100%;
+  }
+
+  .list-component__item {
+    width: 100%;
+    padding: 0 0rem 0rem 2rem;
+  }
+
+  .list-component__card {
+    padding: 3rem 2rem;
+  }
+
+  .list-component__card-title {
+    font-size: 2rem;
+  }
+
+  .list-component__card-desc li {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
+  .list-component__skills {
+    font-size: 1.2rem;
+  }
+
   section#projects {
     padding-top: 1.5rem;
     width: 80vw;
