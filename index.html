@@ -173,8 +173,8 @@
         <label for="featured">Featured</label>
         <input type="radio" id="golang" name="language" value="Golang" />
         <label for="golang">Golang</label>
-        <input type="radio" id="vuejs" name="language" value="Vue" />
-        <label for="vuejs">Vue</label>
+        <!-- <input type="radio" id="vuejs" name="language" value="Vue" />
+        <label for="vuejs">Vue</label> -->
         <input type="radio" id="javascript" name="language" value="JavaScript" />
         <label for="javascript">JavaScript</label>
 
@@ -217,7 +217,48 @@
             </div>
           </div>
         </div>
+        <div class="cards-container__card featured golang">
+          <div class="cards-container__card-img">
+            <img class="portrait-orient" src="./public/projects/gshortify-portrait.png" />
+            <img class="landscape-orient" src="./public/projects/gshortify-landscape.png" />
+          </div>
+          <div class="cards-container__card-info">
+            <div class="card-info__title">GSHORTIFY</div>
+            <div class="card-info__desc">
+              URL Shortener application which involves the creation and consumption of APIs, allowing to shorten and
+              manage URLs efficiently, while showcasing key concepts such as data handling, routing, and database
+              interaction.
+            </div>
+            <div class="card-info__stack">
+              <ul>
+                <li>
+                  <img src="./public/projects/stack-icons/golang-icon.png" alt="Golang" title="Golang" />
+                </li>
 
+                <li>
+                  <img src="./public/projects/stack-icons/html5.png" alt="HTML5" title="HTML5" />
+                </li>
+                <li>
+                  <img src="./public/projects/stack-icons/css-3.png" alt="CSS3" title="CSS3" />
+                </li>
+                <li>
+                  <img src="./public/projects/stack-icons/js.png" alt="JavaScript" title="JavaScript" />
+                </li>
+                <li>
+                  <img src="./public/projects/stack-icons/supabase-icon.png" alt="Supabase" title="Supabase" />
+                </li>
+              </ul>
+            </div>
+            <div class="card-info__links">
+              <a href="https://github.com/harshitrajsinha/go-url-shortener" target="_blank"><button class="github-link">
+                  View Source<span class="source-icon"><img
+                      src="./public/projects/stack-icons/github-logo.png" /></span></button></a>
+
+              <a href="https://gshortify.vercel.app/" target="_blank"><button class="site-link">Visit
+                  Site</button></a>
+            </div>
+          </div>
+        </div>
         <div class="cards-container__card featured vuejs javascript">
           <div class="cards-container__card-img">
             <img class="portrait-orient" src="./public/projects/todo-portrait.png" />
@@ -253,7 +294,7 @@
             </div>
           </div>
         </div>
-        <div class="cards-container__card featured javascript">
+        <div class="cards-container__card javascript">
           <div class="cards-container__card-img">
             <img class="portrait-orient" src="./public/projects/speed-typing-portrait.png" />
             <img class="landscape-orient" src="./public/projects/speed-typing-landscape.png" />
