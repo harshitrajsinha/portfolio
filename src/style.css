@@ -511,15 +511,15 @@ input[type="radio"]#featured:checked ~ .featured {
   display: flex;
 }
 
-input[type="radio"]#vuejs:checked ~ .vuejs {
-  display: flex;
-}
-
 input[type="radio"]#golang:checked ~ .golang {
   display: flex;
 }
 
 input[type="radio"]#javascript:checked ~ .javascript {
+  display: flex;
+}
+
+input[type="radio"]#vibe:checked ~ .vibe {
   display: flex;
 }
 

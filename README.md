@@ -2,10 +2,22 @@
 
 [Visit Site](https://harshitrajsinha.github.io/portfolio/)
 
-<!--
-# Dimensions:
+# Project List
 
-- Laptop - Height => 701.60px Width => 1536px
-- Tablet - Width => 1024px
+### Golang
 
--->
+- VANMANGO: [GitHub](https://github.com/harshitrajsinha/goclient-vanmango)
+- GSHORTIFY: [GitHub](https://github.com/harshitrajsinha/go-url-shortener)
+
+### VueJS
+
+- Momentodo: [GitHub](https://github.com/harshitrajsinha/todo-vue)
+
+### JavaScript
+
+- Speed Typing: [GitHub](https://github.com/harshitrajsinha/speed-typing)
+- Weather App: [GitHub](https://github.com/harshitrajsinha/weather-app)
+
+### Vibe
+
+- Job Form Builder: [GitHub](https://github.com/harshitrajsinha/job-form-builder)
