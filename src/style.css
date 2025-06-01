@@ -247,7 +247,8 @@ video {
 
 .marquee-img {
   margin-top: 5px;
-  width: 4rem;
+  min-width: 4rem;
+  max-width: 6rem;
   height: 4rem;
   opacity: 0.5;
 }

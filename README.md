@@ -21,3 +21,4 @@
 ### Vibe
 
 - Job Form Builder: [GitHub](https://github.com/harshitrajsinha/job-form-builder)
+- Map My Udemy: [GitHub](https://github.com/harshitrajsinha/map-my-udemy)
